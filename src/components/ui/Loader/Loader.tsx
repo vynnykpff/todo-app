@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
 import { TailSpin } from "react-loader-spinner";
 
-export const Loader = () => {
+export const Loader = (): ReactNode => {
   return (
     <TailSpin
       height="70"

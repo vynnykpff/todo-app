@@ -1,15 +1,14 @@
-import { Todo } from "@/components/TodoLayout/TodoList/components/Todo/Todo.tsx";
-import { TodoListHeader } from "@/components/TodoLayout/TodoList/components/TodoListHeader/TodoListHeader.tsx";
-import { TodoListNoData } from "@/components/TodoLayout/TodoList/components/TodoListNoData/TodoListNoData.tsx";
-import { useAppSelector } from "@/hooks/useAppSelector.ts";
+import { ReactNode } from "react";
+import { useAppSelector } from "@hooks";
+import { Todo, TodoListEmpty, TodoListHeader } from "./components";
 import styles from "./TodoList.module.scss";
 
-export const TodoList = () => {
+export const TodoList = (): ReactNode => {
   const { searchedTodos, todos, filterValue, searchValue } = useAppSelector(state => state.todoReducer);
 
   const visibleTodos = searchValue.length ? searchedTodos : todos;
 
-  const setNoDataMessage = () => {
+  const setTodoEmptyMessage = (): string => {
     return searchValue.length ? `Nothing found in the filter: ${filterValue}` : filterValue;
   };
 
@@ -20,7 +19,7 @@ export const TodoList = () => {
         {visibleTodos.length ? (
           visibleTodos.map(todo => <Todo key={todo.todoId} {...todo} />)
         ) : (
-          <TodoListNoData title={setNoDataMessage()} />
+          <TodoListEmpty title={setTodoEmptyMessage()} />
         )}
       </ul>
     </section>

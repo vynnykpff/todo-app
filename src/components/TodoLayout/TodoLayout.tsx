@@ -1,13 +1,12 @@
-import { CreateTodo } from "@/components/TodoLayout/CreateTodo/CreateTodo.tsx";
-import { SearchTodo } from "@/components/TodoLayout/SearchTodo/SearchTodo.tsx";
-import { TodoList } from "@/components/TodoLayout/TodoList/TodoList.tsx";
+import { TodoCreate, TodoList, TodoSearch } from "@components";
+import { ReactNode } from "react";
 import styles from "./TodoLayout.module.scss";
 
-export const TodoLayout = () => {
+export const TodoLayout = (): ReactNode => {
   return (
     <main className={styles.todoLayoutContainer}>
-      <CreateTodo />
-      <SearchTodo />
+      <TodoCreate />
+      <TodoSearch />
       <TodoList />
     </main>
   );

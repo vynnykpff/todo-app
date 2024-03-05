@@ -1,15 +1,14 @@
-import { useAppDispatch } from "@/hooks/useAppDispatch.ts";
-import { useAppSelector } from "@/hooks/useAppSelector.ts";
-import { setNotificationTitle } from "@/store/actions/notificationActionCreators.ts";
-import { memo, useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@hooks";
+import { setNotificationTitle } from "@store";
+import { ReactNode, memo, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Notification = () => {
+const Notification = (): ReactNode => {
   const { title, delay, type } = useAppSelector(state => state.notificationReducer);
   const dispatch = useAppDispatch();
 
-  const notify = () =>
+  const notify = (): ReactNode =>
     toast[type](title, {
       onClose: () => {
         dispatch(setNotificationTitle(""));

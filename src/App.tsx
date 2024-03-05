@@ -2,9 +2,9 @@ import { THEME } from "@/common/constants/ThemeConstats.ts";
 import { Header } from "@/components/Header/Header.tsx";
 import { TodoLayout } from "@/components/TodoLayout/TodoLayout.tsx";
 import { ThemeContext } from "@/providers/ThemeProvider.tsx";
-import { useContext, useEffect } from "react";
+import { ReactNode, useContext, useEffect } from "react";
 
-export const App = () => {
+export const App = (): ReactNode => {
   const { type } = useContext(ThemeContext);
 
   useEffect(() => {
