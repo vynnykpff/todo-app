@@ -1,6 +1,5 @@
-import './App.css';
-import { ReactNode } from 'react';
-
-export const App = (): ReactNode => {
-  return <div></div>;
+const App = () => {
+  return <div>Work!</div>;
 };
+
+export default App;
