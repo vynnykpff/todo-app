@@ -1,11 +1,11 @@
-import { ThemeConstants } from "@/common/constants/ThemeConstats.ts";
-import { Button } from "@/components/ui/Button/Button.tsx";
-import { ThemeContext } from "@/providers/ThemeProvider.tsx";
-import { useContext } from "react";
+import { ThemeConstants } from "@constants";
+import { Button } from "@components";
+import { ThemeContext } from "@providers";
+import { ReactNode, useContext } from "react";
 import { BiMoon, BiSun } from "react-icons/bi";
-import styles from "./SwitchTheme.module.scss";
+import styles from "./ThemeSwitcher.module.scss";
 
-export const SwitchTheme = () => {
+export const ThemeSwitcher = (): ReactNode => {
   const { type, setType } = useContext(ThemeContext);
 
   return (

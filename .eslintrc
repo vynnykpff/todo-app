@@ -5,6 +5,7 @@
     "es2021": true
   },
   "extends": [
+    "@wemake-services/typescript/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
@@ -30,7 +31,10 @@
     "prettier"
   ],
   "rules": {
+    "import/max-dependencies": "off",
+    "import/no-unresolved": "off",
     "no-console": "warn",
+    "import/no-cycle": "off",
     "prefer-const": "warn",
     "quotes": "warn",
     "jsx-quotes": [
@@ -73,6 +77,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "react/prop-types": "off",
     "react-hooks/exhaustive-deps": "off",
     "react/react-in-jsx-scope": "off",
@@ -127,7 +132,6 @@
         "selector": [
           "classMethod",
           "classProperty",
-          "parameter",
           "variable"
         ]
       },

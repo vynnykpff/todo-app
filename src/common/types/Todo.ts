@@ -1,12 +1,4 @@
-import { TodoConstants } from "@/common/constants/TodoConstants.ts";
-
-export type Todo = {
-  todoTitle: string;
-  createdDate: string;
-  expirationDate: string;
-  isCompleted: boolean;
-  todoId: string;
-};
+import { TodoConstants, TodoEditingConstants, TodoFilteringConstants } from "@/common/constants/TodoConstants/TodoManagementActions.ts";
 
 type AddTodoAction = {
   type: typeof TodoConstants.ADD_TODO;
@@ -14,14 +6,14 @@ type AddTodoAction = {
 };
 
 type SetTodoTitleAction = {
-  type: typeof TodoConstants.SET_TODO_TITLE;
+  type: typeof TodoEditingConstants.SET_TODO_TITLE;
   payload: {
     todoTitle: Todo["todoTitle"];
   };
 };
 
 type SetTodoCompletedAction = {
-  type: typeof TodoConstants.SET_COMPLETED_TODO;
+  type: typeof TodoEditingConstants.SET_COMPLETED_TODO;
   payload: {
     todoId: Todo["todoId"];
   };
@@ -34,25 +26,18 @@ type DeleteTodoAction = {
   };
 };
 
-export type EditTodo = {
-  todoTitle: Todo["todoTitle"];
-  createdDate: Todo["createdDate"];
-  expirationDate: Todo["expirationDate"];
-  todoId: Todo["todoId"];
-};
-
 type EditTodoAction = {
-  type: typeof TodoConstants.EDIT_TODO;
+  type: typeof TodoEditingConstants.EDIT_TODO;
   payload: EditTodo;
 };
 
 type SetCurrentTodoAction = {
-  type: typeof TodoConstants.SET_CURRENT_TODO;
+  type: typeof TodoEditingConstants.SET_CURRENT_TODO;
   payload: Todo;
 };
 
 type SetFiltrationValueAction = {
-  type: typeof TodoConstants.SET_FILTRATION_VALUE;
+  type: typeof TodoFilteringConstants.SET_FILTRATION_VALUE;
   payload: {
     filter: string;
   };
@@ -63,13 +48,28 @@ type DeleteCompletedTodoAction = {
 };
 
 type SearchTodosAction = {
-  type: typeof TodoConstants.SEARCH_TODO;
+  type: typeof TodoFilteringConstants.SEARCH_TODO;
   payload: Todo[];
 };
 
 type SetSearchValueAction = {
-  type: typeof TodoConstants.SEARCH_VALUE;
+  type: typeof TodoFilteringConstants.SEARCH_VALUE;
   payload: Todo["todoTitle"];
+};
+
+export type Todo = {
+  todoTitle: string;
+  createdDate: string;
+  expirationDate: string;
+  isCompleted: boolean;
+  todoId: string;
+};
+
+export type EditTodo = {
+  todoTitle: Todo["todoTitle"];
+  createdDate: Todo["createdDate"];
+  expirationDate: Todo["expirationDate"];
+  todoId: Todo["todoId"];
 };
 
 export type TodoActionTypes =

@@ -15,6 +15,30 @@
       ],
       "#/*": [
         "src/assets/*"
+      ],
+      "@hooks": [
+        "src/hooks"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@store": [
+        "src/store"
+      ],
+      "@providers": [
+        "src/providers"
+      ],
+      "@types": [
+        "src/common/types"
+      ],
+      "@constants": [
+        "src/common/constants"
+      ],
+      "@schemes": [
+        "src/common/schemes"
+      ],
+      "@components": [
+        "src/components"
       ]
     },
     /* Bundler mode */

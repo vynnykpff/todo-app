@@ -1,3 +1,3 @@
-export const checkOnValidField = (item: string) => {
+export const isValidField = (item: string): string => {
   return item.replace(/[@#№$%^&*()\\[\]_+={}<>/|]/g, "");
 };

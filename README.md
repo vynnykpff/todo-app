@@ -1,6 +1,6 @@
-# **Reenbit Todo App**
+# **Todo App**
 
-## [**<u>Link to website</u>**](https://vynnykpff.github.io/reenbit-todo-app/)
+## [**<u>Link to website</u>**](https://vynnykpff.github.io/todo-app/)
 
 #### It is an application where you can create, update, sort, and perform many other task operations.
 
@@ -33,8 +33,8 @@
 3. Installing all dependencies;
 
 ```sh
- 1. git clone https://github.com/vynnykpff/reenbit-todo-app.git 
- 2. cd pets-paw-app
+ 1. git clone https://github.com/vynnykpff/todo-app.git 
+ 2. cd todo-app
  3. yarn
     #or
     npm install

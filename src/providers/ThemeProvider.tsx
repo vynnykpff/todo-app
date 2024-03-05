@@ -7,7 +7,7 @@ type ThemeState = {
   setType: SetState<ThemeConstants>;
 };
 
-const getTheme = () => {
+const getTheme = (): ThemeConstants => {
   const theme = `${window?.localStorage?.getItem(THEME)}`;
   if ([ThemeConstants.LIGHT, ThemeConstants.DARK].includes(theme as ThemeConstants)) {
     return theme as ThemeConstants;

@@ -9,7 +9,7 @@ export const useModalState = <T extends keyof ModalState>(key: T): [boolean, Set
   const modalState = useAppSelector(state => state.modalReducer);
   const dispatch = useAppDispatch();
 
-  const setState = (visible: boolean, props?: ModalState[T]["props"]) => {
+  const setState = (visible: boolean, props?: ModalState[T]["props"]): void => {
     dispatch(setModal({ [key]: { visible, props: props ?? {} } }));
   };
 
