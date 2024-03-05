@@ -1,6 +1,6 @@
 # **Todo App**
 
-## [**<u>Link to website</u>**](https://vynnykpff.github.io/todo-app/)
+## [**<u>Link to website</u>**](https://todo-app-vynnykpff.vercel.app/)
 
 #### It is an application where you can create, update, sort, and perform many other task operations.
 
